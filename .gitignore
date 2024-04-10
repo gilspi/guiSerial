@@ -1,0 +1,8 @@
+.DS_Store
+.idea/
+
+# virtual
+venv/
+
+# etc
+ASK_IF_PROTO.MD
