@@ -1,0 +1,636 @@
+{
+    "ask_rf_->_ask_if___(rx_section)": [
+        {
+            "name": "DA28 Control",
+            "id": "da28_control",
+            "size": 3,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "7": "AUTO"
+                },
+                {
+                    "3": "OUT"
+                },
+                {
+                    "6": "Reserved"
+                }
+            ]
+        },
+        {
+            "name": "DA23 Control",
+            "id": "da23_control",
+            "size": 3,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "7": "AUTO"
+                },
+                {
+                    "3": "OUT"
+                },
+                {
+                    "6": "Reserved"
+                }
+            ]
+        },
+        {
+            "name": "DA7 Control",
+            "id": "da7_control",
+            "size": 2,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "3": "AUTO"
+                },
+                {
+                    "1": "OUT"
+                },
+                {
+                    "2": "Reserved"
+                }
+            ]
+        },
+        {
+            "name": "DA4 Control",
+            "id": "da4_control",
+            "size": 2,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "3": "AUTO"
+                },
+                {
+                    "1": "OUT"
+                },
+                {
+                    "2": "Reserved"
+                }
+            ]
+        },
+        {
+            "name": "DA2 Control",
+            "id": "da2_control",
+            "size": 2,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "3": "AUTO"
+                },
+                {
+                    "1": "OUT"
+                },
+                {
+                    "2": "Reserved"
+                }
+            ]
+        },
+        {
+            "name": "DA3 Control",
+            "id": "da3_control",
+            "size": 2,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "3": "AUTO"
+                },
+                {
+                    "1": "OUT"
+                },
+                {
+                    "2": "Reserved"
+                }
+            ]
+        },
+        {
+            "name": "En_IQdmd",
+            "id": "en_iqdmd",
+            "size": 2,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "3": "AUTO"
+                },
+                {
+                    "1": "Off"
+                },
+                {
+                    "2": "Reserved"
+                }
+            ]
+        },
+        {
+            "name": "En_IQmd",
+            "id": "en_iqmd",
+            "size": 2,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "3": "AUTO"
+                },
+                {
+                    "1": "Off"
+                },
+                {
+                    "2": "Reserved"
+                }
+            ]
+        },
+        {
+            "name": "En_LO_5",
+            "id": "en_lo_5",
+            "size": 2,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "3": "AUTO"
+                },
+                {
+                    "1": "Off"
+                },
+                {
+                    "2": "Reserved"
+                }
+            ]
+        },
+        {
+            "name": "En_LO_33",
+            "id": "en_lo_33",
+            "size": 2,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "3": "AUTO"
+                },
+                {
+                    "1": "Off"
+                },
+                {
+                    "2": "Reserved"
+                }
+            ]
+        },
+        {
+            "name": "En_IQdmd_PWR",
+            "id": "en_iqdmd_pwr",
+            "size": 2,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "3": "AUTO"
+                },
+                {
+                    "1": "Off"
+                },
+                {
+                    "2": "Reserved"
+                }
+            ]
+        },
+        {
+            "name": "En_LO_amp",
+            "id": "en_lo_amp",
+            "size": 2,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "3": "AUTO"
+                },
+                {
+                    "1": "Off"
+                },
+                {
+                    "2": "Reserved"
+                }
+            ]
+        },
+        {
+            "name": "En_RX_amp",
+            "id": "en_rx_amp",
+            "size": 2,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "3": "AUTO"
+                },
+                {
+                    "1": "Off"
+                },
+                {
+                    "2": "Reserved"
+                }
+            ]
+        },
+        {
+            "name": "HMC_Enable",
+            "id": "hmc_enable",
+            "size": 2,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "3": "AUTO"
+                },
+                {
+                    "1": "Off"
+                },
+                {
+                    "2": "Reserved"
+                }
+            ]
+        },
+        {
+            "name": "ASK_IF_Power_Mode",
+            "id": "ask_if_power_mode",
+            "size": 1,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "0": "Off"
+                },
+                {
+                    "1": "On"
+                }
+            ]
+        },
+        {
+            "name": "FORCE_UPDATE",
+            "id": "force_update",
+            "size": 1,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "0": "Off"
+                },
+                {
+                    "1": "On"
+                }
+            ]
+        },
+        {
+            "name": "ATT_IN_COM",
+            "id": "att_in_com",
+            "size": 6,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "63": "ATT"
+                }
+            ]
+        },
+        {
+            "name": "ATT_IN_IQ",
+            "id": "att_in_iq",
+            "size": 6,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "63": "ATT"
+                }
+            ]
+        },
+        {
+            "name": "HMC Freq 0",
+            "id": "hmc_freq_0",
+            "size": null,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "500": "6000"
+                }
+            ]
+        },
+        {
+            "name": "HMC Freq 1",
+            "id": "hmc_freq_1",
+            "size": null,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "500": "6000"
+                }
+            ]
+        },
+        {
+            "name": "HMC Freq 2",
+            "id": "hmc_freq_2",
+            "size": null,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "500": "6000"
+                }
+            ]
+        },
+        {
+            "name": "HMC Freq 3",
+            "id": "hmc_freq_3",
+            "size": null,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "500": "6000"
+                }
+            ]
+        },
+        {
+            "name": "CMP_TH_LOW",
+            "id": "cmp_th_low",
+            "size": null,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": []
+        },
+        {
+            "name": "CMP_TH_HIGH",
+            "id": "cmp_th_high",
+            "size": null,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": []
+        }
+    ],
+    "ask_if_->_ask_rf_(tx_section)": [
+        {
+            "name": "DA28 State",
+            "id": "da28_state",
+            "size": 2,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "3": "OUT"
+                }
+            ]
+        },
+        {
+            "name": "DA23 State",
+            "id": "da23_state",
+            "size": 2,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "3": "OUT"
+                }
+            ]
+        },
+        {
+            "name": "DA7 State",
+            "id": "da7_state",
+            "size": 1,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "1": "OUT"
+                }
+            ]
+        },
+        {
+            "name": "DA4 State",
+            "id": "da4_state",
+            "size": 1,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "1": "OUT"
+                }
+            ]
+        },
+        {
+            "name": "DA2 State",
+            "id": "da2_state",
+            "size": 1,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "1": "OUT"
+                }
+            ]
+        },
+        {
+            "name": "DA3 State",
+            "id": "da3_state",
+            "size": 1,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "1": "OUT"
+                }
+            ]
+        },
+        {
+            "name": "En_IQdmd",
+            "id": "en_iqdmd",
+            "size": 1,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "1": "Off"
+                }
+            ]
+        },
+        {
+            "name": "En_IQmd",
+            "id": "en_iqmd",
+            "size": 1,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "1": "Off"
+                }
+            ]
+        },
+        {
+            "name": "En_LO_5",
+            "id": "en_lo_5",
+            "size": 1,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "1": "Off"
+                }
+            ]
+        },
+        {
+            "name": "En_LO_33",
+            "id": "en_lo_33",
+            "size": 1,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "1": "Off"
+                }
+            ]
+        },
+        {
+            "name": "En_IQdmd_PWR",
+            "id": "en_iqdmd_pwr",
+            "size": 1,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "1": "Off"
+                }
+            ]
+        },
+        {
+            "name": "En_LO_amp",
+            "id": "en_lo_amp",
+            "size": 1,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "1": "Off"
+                }
+            ]
+        },
+        {
+            "name": "En_RX_amp",
+            "id": "en_rx_amp",
+            "size": 1,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "1": "Off"
+                }
+            ]
+        },
+        {
+            "name": "HMC_Enable",
+            "id": "hmc_enable",
+            "size": 1,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "1": "Off"
+                }
+            ]
+        },
+        {
+            "name": "ATT_IN_COM",
+            "id": "att_in_com",
+            "size": 6,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "63": "ATT"
+                }
+            ]
+        },
+        {
+            "name": "ATT_IN_IQ",
+            "id": "att_in_iq",
+            "size": 6,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "63": "ATT"
+                }
+            ]
+        },
+        {
+            "name": "HMC Freq 0",
+            "id": "hmc_freq_0",
+            "size": null,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": [
+                {
+                    "500": "6000"
+                }
+            ]
+        },
+        {
+            "name": "CMP_TH_LOW",
+            "id": "cmp_th_low",
+            "size": null,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": []
+        },
+        {
+            "name": "CMP_TH_HIGH",
+            "id": "cmp_th_high",
+            "size": null,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": []
+        },
+        {
+            "name": "VDET_RX_MAXPWR",
+            "id": "vdet_rx_maxpwr",
+            "size": null,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": []
+        },
+        {
+            "name": "VDET_OUT_MAXPWR",
+            "id": "vdet_out_maxpwr",
+            "size": null,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": []
+        },
+        {
+            "name": "HMC_LD",
+            "id": "hmc_ld",
+            "size": 1,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": []
+        },
+        {
+            "name": "CMP_LOW",
+            "id": "cmp_low",
+            "size": 1,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": []
+        },
+        {
+            "name": "CMP_HIGH",
+            "id": "cmp_high",
+            "size": 1,
+            "offset_bytes": null,
+            "offset_bits": null,
+            "params": []
+        }
+    ]
+}
