@@ -11,6 +11,8 @@ def search_data(string: str) -> dict:
 
     data = []
     for string_ in arr_strings:
+        if "Reserved" in string_:
+            continue
         data.append(string_.strip().split(' - '))
 
     result = {}
@@ -39,7 +41,7 @@ def search_data(string: str) -> dict:
 
 
 def parse_file(path: str) -> dict:
-    data = {}
+    d = {}
 
     with open(path, 'r') as file:
         content = file.read()
@@ -50,20 +52,33 @@ def parse_file(path: str) -> dict:
             parameters = re.findall(r"(\d+\. .+?): (.+?)\n|Byte\s+(\d+)", section_content)
             section_data = []
 
-            current_value, byte_, type_ = None, None, None
+            current_value, byte_, type_ = 0, None, None
+            offset_bits, size = 0, 0
 
             for param_name, description, bytes_ in parameters:
                 param_name = re.sub(r'\d+\.', '', param_name).strip()
                 match = re.search(r'(\d+) bits?', description)
 
                 if bytes_ != "":
+                    prev = current_value
                     current_value = int(bytes_)
+
+                    if prev != current_value:
+                        offset_bits = 0
 
                 if bytes_ == "":
                     byte_ = current_value
 
-                    size = int(match.group(1)) if match is not None else 0
-                    offset_bits = size
+                    size = int(match.group(1)) if match is not None else 8
+                    if size == 8 and byte_ in range(4, 13, 2) and param_name not in ['CMP_TH_LOW', 'VDET_RX_MAXPWR', 'ATT_IN_COM']:
+                        offset_bits = 16
+
+                    if size == 1:
+                        type_ = 'checkbutton'
+                    elif size in range(2, 5):
+                        type_ = 'radiobutton'
+                    else:
+                        type_ = 'text'
 
                     param_info = {
                         "name": param_name,
@@ -71,16 +86,18 @@ def parse_file(path: str) -> dict:
                         "size": size,
                         "offset_bytes": byte_,
                         "offset_bits": offset_bits,
+                        "type": type_,
                         "params": [],
                     }
 
+                    offset_bits += size
                     found_data = search_data(description)
 
                     param_info["params"] = found_data
                     section_data.append(param_info)
 
-                data[section_name.lower().replace(" ", "_")] = section_data
-    return data
+                d[section_name.lower().replace(" ", "_")] = section_data
+    return d
 
 
 FILE_PATH = "../../ASK_IF_PROTO.MD"
