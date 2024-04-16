@@ -100,11 +100,13 @@ def parse_file(path: str) -> dict:
     return d
 
 
-FILE_PATH = "../../ASK_IF_PROTO.MD"
-parse_data = parse_file(FILE_PATH)
+def to_json(fpath: str, jpath: str, pointer: str = "w") -> str:
+    parse_data = parse_file(fpath)
 
-JSON_FILE_PATH = "../parsed_data.json"
-with open(JSON_FILE_PATH, "w") as data:
-    json.dump(parse_data, data, indent=4)
+    json_data = json.dumps(parse_data, indent=4)
 
-print("Данные успешно записаны в файл parse_data.json.")
+    with open(jpath, pointer) as data:
+        data.write(json_data)
+
+    print("Данные успешно записаны в файл parse_data.json.")
+    return json_data
