@@ -26,7 +26,7 @@ def search_data(string: str) -> dict:
             value = {"min": min_val, "max": max_val}
         elif 'MHz' in key:
             max_val, units = key.split(" ")
-            min_val, max_value = int(value), int(max_val)
+            min_val, max_val = int(value), int(max_val)
             value = {"min": min_val, "max": max_val, "units": units}
             key = "frequency"
         else:
@@ -43,7 +43,7 @@ def search_data(string: str) -> dict:
 def parse_file(path: str) -> dict:
     d = {}
 
-    with open(path, 'r') as file:
+    with open(path, 'r+') as file:
         content = file.read()
 
         sections = re.findall(r"## (.+?)\n(.+?)(?=\n\n## |\Z)", content, re.DOTALL)
