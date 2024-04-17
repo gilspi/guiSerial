@@ -9,3 +9,4 @@ venv
 # etc
 ASK_IF_PROTO.MD
 .env
+src/.env
