@@ -10,3 +10,5 @@ venv
 ASK_IF_PROTO.MD
 .env
 
+=======
+src/.env
