@@ -1,11 +1,10 @@
-import time
-import multiprocessing
-from queue import Empty
+import serial
+import queue
 
+from src.data.config import serial_ports
 import serial
 
 from src.data.config import serial_ports
-
 
 test_ports = [
     "/dev/tty23",
@@ -14,39 +13,40 @@ test_ports = [
 ]
 
 available_ports = serial_ports()
+print(available_ports)
 
-test_ports.append(available_ports)
-print(test_ports)
+# test_ports.append(available_ports)
+# print(test_ports)
 
 
-def connect(queue: multiprocessing.Queue, port: str = '/dev/tty.wlan-debug', baudrate: int = 115200, bytesize: int = 8, timeout: float = 0.1):
+def serial_receiver(_ser: serial.Serial, queue: queue.Queue):
     try:
-        ser = serial.Serial(port=port, baudrate=baudrate, bytesize=bytesize, timeout=timeout)
         while True:
-            data = ser.read()
+            data = _ser.read()
             queue.put(data)  # Помещаем полученные данные в очередь
     except serial.SerialException as e:
         print("Ошибка при подключении или чтении данных:", e)
 
 
-def update(queue: multiprocessing.Queue):
+def serial_transmitter(_ser: serial.Serial, queue: queue.Queue):
     while True:
         if not queue.empty():
             data = queue.get()  # Получаем данные
             print("Получены данные из порта:", data)
 
 
-def main():
-    port = "/dev/tty.wlan-debug"  # Замените на нужный порт
-    data_queue = multiprocessing.Queue()
+def serial_init(_ser: serial.Serial):
+    data_queue = queue.Queue()
 
-    connect_process = multiprocessing.Process(target=connect, args=(data_queue, port))
-    gui_process = multiprocessing.Process(target=update, args=(data_queue,))
-    connect_process.start()
-    gui_process.start()
-    connect_process.join()
-    gui_process.join()
+    # _serial_receiver = multiprocessing.Process(target=serial_receiver, args=(_ser, data_queue))
+    # _serial_transmitter = multiprocessing.Process(target=serial_transmitter, args=(_ser, data_queue))
+    # _serial_receiver.start()
+    # _serial_transmitter.start()
+    # _serial_receiver.join()
+    # _serial_transmitter.join()
 
 
 if __name__ == "__main__":
-    main()
+    port = 'COM1'  # Замените на нужный порт
+    ser = serial.Serial(port, baudrate=115200, bytesize=8, timeout=0.1)
+    serial_init(ser)
