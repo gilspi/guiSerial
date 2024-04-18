@@ -15,16 +15,16 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QGroupBox,
-    QHBoxLayout, QLabel, QMainWindow, QPlainTextEdit,
-    QPushButton, QRadioButton, QSizePolicy, QVBoxLayout,
-    QWidget)
+from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFormLayout,
+    QGroupBox, QHBoxLayout, QLabel, QMainWindow,
+    QPlainTextEdit, QPushButton, QRadioButton, QSizePolicy,
+    QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(794, 600)
+        MainWindow.resize(793, 600)
         MainWindow.setStyleSheet(u"background-color: rgb(120, 120, 120)")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
@@ -171,7 +171,7 @@ class Ui_MainWindow(object):
 
         self.label_15 = QLabel(self.centralwidget)
         self.label_15.setObjectName(u"label_15")
-        self.label_15.setGeometry(QRect(150, 10, 101, 16))
+        self.label_15.setGeometry(QRect(230, 10, 101, 16))
         self.label_16 = QLabel(self.centralwidget)
         self.label_16.setObjectName(u"label_16")
         self.label_16.setGeometry(QRect(20, 320, 101, 16))
@@ -493,7 +493,7 @@ class Ui_MainWindow(object):
 
         self.groupBox_10 = QGroupBox(self.centralwidget)
         self.groupBox_10.setObjectName(u"groupBox_10")
-        self.groupBox_10.setGeometry(QRect(300, 30, 71, 81))
+        self.groupBox_10.setGeometry(QRect(320, 30, 71, 81))
         self.verticalLayout_36 = QVBoxLayout(self.groupBox_10)
         self.verticalLayout_36.setObjectName(u"verticalLayout_36")
         self.radioButton_52 = QRadioButton(self.groupBox_10)
@@ -514,7 +514,7 @@ class Ui_MainWindow(object):
 
         self.groupBox_11 = QGroupBox(self.centralwidget)
         self.groupBox_11.setObjectName(u"groupBox_11")
-        self.groupBox_11.setGeometry(QRect(220, 30, 71, 81))
+        self.groupBox_11.setGeometry(QRect(240, 30, 71, 81))
         self.verticalLayout_37 = QVBoxLayout(self.groupBox_11)
         self.verticalLayout_37.setObjectName(u"verticalLayout_37")
         self.radioButton_57 = QRadioButton(self.groupBox_11)
@@ -835,16 +835,21 @@ class Ui_MainWindow(object):
 
         self.groupBox = QGroupBox(self.centralwidget)
         self.groupBox.setObjectName(u"groupBox")
-        self.groupBox.setGeometry(QRect(20, 10, 111, 61))
-        self.verticalLayout = QVBoxLayout(self.groupBox)
-        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.groupBox.setGeometry(QRect(20, 10, 201, 61))
+        self.formLayout = QFormLayout(self.groupBox)
+        self.formLayout.setObjectName(u"formLayout")
         self.comboBox = QComboBox(self.groupBox)
         self.comboBox.addItem("")
         self.comboBox.setObjectName(u"comboBox")
         self.comboBox.setContextMenuPolicy(Qt.ContextMenuPolicy.DefaultContextMenu)
         self.comboBox.setEditable(False)
 
-        self.verticalLayout.addWidget(self.comboBox)
+        self.formLayout.setWidget(0, QFormLayout.LabelRole, self.comboBox)
+
+        self.pushButton_2 = QPushButton(self.groupBox)
+        self.pushButton_2.setObjectName(u"pushButton_2")
+
+        self.formLayout.setWidget(0, QFormLayout.FieldRole, self.pushButton_2)
 
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -976,5 +981,6 @@ class Ui_MainWindow(object):
         self.comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"No selected", None))
 
         self.comboBox.setCurrentText(QCoreApplication.translate("MainWindow", u"No selected", None))
+        self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"Connect", None))
     # retranslateUi
 
