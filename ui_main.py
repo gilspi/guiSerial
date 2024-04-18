@@ -15,9 +15,10 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QCheckBox, QGroupBox, QHBoxLayout,
-    QLabel, QMainWindow, QPlainTextEdit, QPushButton,
-    QRadioButton, QSizePolicy, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QGroupBox,
+    QHBoxLayout, QLabel, QMainWindow, QPlainTextEdit,
+    QPushButton, QRadioButton, QSizePolicy, QVBoxLayout,
+    QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -170,7 +171,7 @@ class Ui_MainWindow(object):
 
         self.label_15 = QLabel(self.centralwidget)
         self.label_15.setObjectName(u"label_15")
-        self.label_15.setGeometry(QRect(20, 10, 101, 16))
+        self.label_15.setGeometry(QRect(150, 10, 101, 16))
         self.label_16 = QLabel(self.centralwidget)
         self.label_16.setObjectName(u"label_16")
         self.label_16.setGeometry(QRect(20, 320, 101, 16))
@@ -321,7 +322,7 @@ class Ui_MainWindow(object):
 "")
         self.groupBox_3 = QGroupBox(self.centralwidget)
         self.groupBox_3.setObjectName(u"groupBox_3")
-        self.groupBox_3.setGeometry(QRect(20, 30, 91, 111))
+        self.groupBox_3.setGeometry(QRect(20, 80, 91, 111))
         self.verticalLayout_29 = QVBoxLayout(self.groupBox_3)
         self.verticalLayout_29.setObjectName(u"verticalLayout_29")
         self.radioButton_19 = QRadioButton(self.groupBox_3)
@@ -356,7 +357,7 @@ class Ui_MainWindow(object):
 
         self.groupBox_4 = QGroupBox(self.centralwidget)
         self.groupBox_4.setObjectName(u"groupBox_4")
-        self.groupBox_4.setGeometry(QRect(120, 30, 91, 111))
+        self.groupBox_4.setGeometry(QRect(120, 80, 91, 111))
         self.verticalLayout_30 = QVBoxLayout(self.groupBox_4)
         self.verticalLayout_30.setObjectName(u"verticalLayout_30")
         self.radioButton_22 = QRadioButton(self.groupBox_4)
@@ -387,7 +388,7 @@ class Ui_MainWindow(object):
 
         self.groupBox_5 = QGroupBox(self.centralwidget)
         self.groupBox_5.setObjectName(u"groupBox_5")
-        self.groupBox_5.setGeometry(QRect(20, 140, 81, 81))
+        self.groupBox_5.setGeometry(QRect(20, 190, 81, 81))
         self.verticalLayout_31 = QVBoxLayout(self.groupBox_5)
         self.verticalLayout_31.setObjectName(u"verticalLayout_31")
         self.radioButton_27 = QRadioButton(self.groupBox_5)
@@ -429,7 +430,7 @@ class Ui_MainWindow(object):
 
         self.groupBox_7 = QGroupBox(self.centralwidget)
         self.groupBox_7.setObjectName(u"groupBox_7")
-        self.groupBox_7.setGeometry(QRect(120, 140, 81, 81))
+        self.groupBox_7.setGeometry(QRect(120, 190, 81, 81))
         self.verticalLayout_33 = QVBoxLayout(self.groupBox_7)
         self.verticalLayout_33.setObjectName(u"verticalLayout_33")
         self.radioButton_37 = QRadioButton(self.groupBox_7)
@@ -687,104 +688,104 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_44.addWidget(self.radioButton_51)
 
-        self.widget = QWidget(self.centralwidget)
-        self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(640, 140, 134, 48))
-        self.verticalLayout_3 = QVBoxLayout(self.widget)
+        self.layoutWidget1 = QWidget(self.centralwidget)
+        self.layoutWidget1.setObjectName(u"layoutWidget1")
+        self.layoutWidget1.setGeometry(QRect(640, 140, 134, 48))
+        self.verticalLayout_3 = QVBoxLayout(self.layoutWidget1)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.checkBox = QCheckBox(self.widget)
+        self.checkBox = QCheckBox(self.layoutWidget1)
         self.checkBox.setObjectName(u"checkBox")
 
         self.verticalLayout_3.addWidget(self.checkBox)
 
-        self.checkBox_2 = QCheckBox(self.widget)
+        self.checkBox_2 = QCheckBox(self.layoutWidget1)
         self.checkBox_2.setObjectName(u"checkBox_2")
 
         self.verticalLayout_3.addWidget(self.checkBox_2)
 
-        self.widget1 = QWidget(self.centralwidget)
-        self.widget1.setObjectName(u"widget1")
-        self.widget1.setGeometry(QRect(400, 40, 111, 51))
-        self.widget1.setMaximumSize(QSize(111, 95))
-        self.verticalLayout_4 = QVBoxLayout(self.widget1)
+        self.layoutWidget2 = QWidget(self.centralwidget)
+        self.layoutWidget2.setObjectName(u"layoutWidget2")
+        self.layoutWidget2.setGeometry(QRect(400, 40, 111, 51))
+        self.layoutWidget2.setMaximumSize(QSize(111, 95))
+        self.verticalLayout_4 = QVBoxLayout(self.layoutWidget2)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
         self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
-        self.label = QLabel(self.widget1)
+        self.label = QLabel(self.layoutWidget2)
         self.label.setObjectName(u"label")
         self.label.setMaximumSize(QSize(109, 16))
 
         self.verticalLayout_4.addWidget(self.label)
 
-        self.plainTextEdit = QPlainTextEdit(self.widget1)
+        self.plainTextEdit = QPlainTextEdit(self.layoutWidget2)
         self.plainTextEdit.setObjectName(u"plainTextEdit")
         self.plainTextEdit.setMaximumSize(QSize(109, 71))
         self.plainTextEdit.setStyleSheet(u"background-color: white")
 
         self.verticalLayout_4.addWidget(self.plainTextEdit)
 
-        self.widget2 = QWidget(self.centralwidget)
-        self.widget2.setObjectName(u"widget2")
-        self.widget2.setGeometry(QRect(630, 350, 121, 51))
-        self.verticalLayout_23 = QVBoxLayout(self.widget2)
+        self.layoutWidget3 = QWidget(self.centralwidget)
+        self.layoutWidget3.setObjectName(u"layoutWidget3")
+        self.layoutWidget3.setGeometry(QRect(630, 350, 121, 51))
+        self.verticalLayout_23 = QVBoxLayout(self.layoutWidget3)
         self.verticalLayout_23.setObjectName(u"verticalLayout_23")
         self.verticalLayout_23.setContentsMargins(0, 0, 0, 0)
-        self.label_20 = QLabel(self.widget2)
+        self.label_20 = QLabel(self.layoutWidget3)
         self.label_20.setObjectName(u"label_20")
 
         self.verticalLayout_23.addWidget(self.label_20)
 
-        self.plainTextEdit_18 = QPlainTextEdit(self.widget2)
+        self.plainTextEdit_18 = QPlainTextEdit(self.layoutWidget3)
         self.plainTextEdit_18.setObjectName(u"plainTextEdit_18")
         self.plainTextEdit_18.setStyleSheet(u"background-color: white")
 
         self.verticalLayout_23.addWidget(self.plainTextEdit_18)
 
-        self.widget3 = QWidget(self.centralwidget)
-        self.widget3.setObjectName(u"widget3")
-        self.widget3.setGeometry(QRect(140, 350, 211, 206))
-        self.horizontalLayout_2 = QHBoxLayout(self.widget3)
+        self.layoutWidget4 = QWidget(self.centralwidget)
+        self.layoutWidget4.setObjectName(u"layoutWidget4")
+        self.layoutWidget4.setGeometry(QRect(140, 350, 211, 206))
+        self.horizontalLayout_2 = QHBoxLayout(self.layoutWidget4)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_19 = QVBoxLayout()
         self.verticalLayout_19.setObjectName(u"verticalLayout_19")
-        self.checkBox_17 = QCheckBox(self.widget3)
+        self.checkBox_17 = QCheckBox(self.layoutWidget4)
         self.checkBox_17.setObjectName(u"checkBox_17")
         self.checkBox_17.setChecked(False)
 
         self.verticalLayout_19.addWidget(self.checkBox_17)
 
-        self.checkBox_18 = QCheckBox(self.widget3)
+        self.checkBox_18 = QCheckBox(self.layoutWidget4)
         self.checkBox_18.setObjectName(u"checkBox_18")
 
         self.verticalLayout_19.addWidget(self.checkBox_18)
 
-        self.checkBox_19 = QCheckBox(self.widget3)
+        self.checkBox_19 = QCheckBox(self.layoutWidget4)
         self.checkBox_19.setObjectName(u"checkBox_19")
 
         self.verticalLayout_19.addWidget(self.checkBox_19)
 
-        self.checkBox_24 = QCheckBox(self.widget3)
+        self.checkBox_24 = QCheckBox(self.layoutWidget4)
         self.checkBox_24.setObjectName(u"checkBox_24")
 
         self.verticalLayout_19.addWidget(self.checkBox_24)
 
-        self.checkBox_26 = QCheckBox(self.widget3)
+        self.checkBox_26 = QCheckBox(self.layoutWidget4)
         self.checkBox_26.setObjectName(u"checkBox_26")
 
         self.verticalLayout_19.addWidget(self.checkBox_26)
 
-        self.checkBox_28 = QCheckBox(self.widget3)
+        self.checkBox_28 = QCheckBox(self.layoutWidget4)
         self.checkBox_28.setObjectName(u"checkBox_28")
 
         self.verticalLayout_19.addWidget(self.checkBox_28)
 
-        self.checkBox_5 = QCheckBox(self.widget3)
+        self.checkBox_5 = QCheckBox(self.layoutWidget4)
         self.checkBox_5.setObjectName(u"checkBox_5")
 
         self.verticalLayout_19.addWidget(self.checkBox_5)
 
-        self.checkBox_3 = QCheckBox(self.widget3)
+        self.checkBox_3 = QCheckBox(self.layoutWidget4)
         self.checkBox_3.setObjectName(u"checkBox_3")
 
         self.verticalLayout_19.addWidget(self.checkBox_3)
@@ -794,43 +795,56 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_2 = QVBoxLayout()
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.checkBox_21 = QCheckBox(self.widget3)
+        self.checkBox_21 = QCheckBox(self.layoutWidget4)
         self.checkBox_21.setObjectName(u"checkBox_21")
 
         self.verticalLayout_2.addWidget(self.checkBox_21)
 
-        self.checkBox_22 = QCheckBox(self.widget3)
+        self.checkBox_22 = QCheckBox(self.layoutWidget4)
         self.checkBox_22.setObjectName(u"checkBox_22")
 
         self.verticalLayout_2.addWidget(self.checkBox_22)
 
-        self.checkBox_20 = QCheckBox(self.widget3)
+        self.checkBox_20 = QCheckBox(self.layoutWidget4)
         self.checkBox_20.setObjectName(u"checkBox_20")
 
         self.verticalLayout_2.addWidget(self.checkBox_20)
 
-        self.checkBox_23 = QCheckBox(self.widget3)
+        self.checkBox_23 = QCheckBox(self.layoutWidget4)
         self.checkBox_23.setObjectName(u"checkBox_23")
 
         self.verticalLayout_2.addWidget(self.checkBox_23)
 
-        self.checkBox_25 = QCheckBox(self.widget3)
+        self.checkBox_25 = QCheckBox(self.layoutWidget4)
         self.checkBox_25.setObjectName(u"checkBox_25")
 
         self.verticalLayout_2.addWidget(self.checkBox_25)
 
-        self.checkBox_27 = QCheckBox(self.widget3)
+        self.checkBox_27 = QCheckBox(self.layoutWidget4)
         self.checkBox_27.setObjectName(u"checkBox_27")
 
         self.verticalLayout_2.addWidget(self.checkBox_27)
 
-        self.checkBox_4 = QCheckBox(self.widget3)
+        self.checkBox_4 = QCheckBox(self.layoutWidget4)
         self.checkBox_4.setObjectName(u"checkBox_4")
 
         self.verticalLayout_2.addWidget(self.checkBox_4)
 
 
         self.horizontalLayout_2.addLayout(self.verticalLayout_2)
+
+        self.groupBox = QGroupBox(self.centralwidget)
+        self.groupBox.setObjectName(u"groupBox")
+        self.groupBox.setGeometry(QRect(20, 10, 111, 61))
+        self.verticalLayout = QVBoxLayout(self.groupBox)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.comboBox = QComboBox(self.groupBox)
+        self.comboBox.addItem("")
+        self.comboBox.setObjectName(u"comboBox")
+        self.comboBox.setContextMenuPolicy(Qt.ContextMenuPolicy.DefaultContextMenu)
+        self.comboBox.setEditable(False)
+
+        self.verticalLayout.addWidget(self.comboBox)
 
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -958,5 +972,9 @@ class Ui_MainWindow(object):
         self.checkBox_25.setText(QCoreApplication.translate("MainWindow", u"En_IQdmd_PWR", None))
         self.checkBox_27.setText(QCoreApplication.translate("MainWindow", u"En_RX_amp", None))
         self.checkBox_4.setText(QCoreApplication.translate("MainWindow", u"CMP_LOW", None))
+        self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u"Select port", None))
+        self.comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"No selected", None))
+
+        self.comboBox.setCurrentText(QCoreApplication.translate("MainWindow", u"No selected", None))
     # retranslateUi
 
