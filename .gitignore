@@ -21,7 +21,6 @@ share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-MANIFEST
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -48,3 +47,9 @@ __pypackages__/
 .venv
 env/
 venv/
+
+#etc
+../.DS_Store
+../.idea/
+../ASK_IF_PROTO.MD
+.DS_Store
