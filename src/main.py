@@ -3,9 +3,8 @@ import json
 
 import serial
 from PySide6.QtWidgets import (
-    QApplication, QMainWindow, QGroupBox,
-    QPlainTextEdit, QRadioButton, QCheckBox,
-    QWidget
+    QApplication, QMainWindow, QPlainTextEdit,
+    QRadioButton, QCheckBox, QWidget,
 )
 from ui_main import Ui_MainWindow
 
@@ -20,13 +19,13 @@ class MainWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.__add_ports()
-        self.ui.pushButton.setEnabled(False)
-        self.ui.pushButton.clicked.connect(self.send_data)
+        self.ui.send_btn.setEnabled(False)
+        self.ui.send_btn.clicked.connect(self.send_data)
 
     def __add_ports(self):
-        self.ui.comboBox.addItems([tport for tport in available_ports[:3]])
-        self.ui.comboBox.currentIndexChanged.connect(self.on_combo_box_changed)
-        self.ui.pushButton_2.clicked.connect(self.connect_to_port)
+        self.ui.list_ports.addItems([tport for tport in available_ports[:3]])
+        self.ui.list_ports.currentIndexChanged.connect(self.on_combo_box_changed)
+        self.ui.btn_connect.clicked.connect(self.connect_to_port)
 
     def on_combo_box_changed(self, index):
         self.selected_port = available_ports[index-1]
@@ -35,7 +34,7 @@ class MainWindow(QMainWindow):
     def connect_to_port(self):
         if self.selected_port:
             print("Connection to port:", self.selected_port)
-            self.ui.pushButton.setEnabled(True)
+            self.ui.send_btn.setEnabled(True)
             self.ser = serial.Serial(self.selected_port, baudrate=115200, bytesize=8, timeout=0.1)
             serial_init(self.ser)
         else:
@@ -56,26 +55,29 @@ class MainWindow(QMainWindow):
 
         all_widgets = self.findChildren(QWidget)
         for widget in all_widgets:
-            if widget.objectName() not in exclude_list:  # and startswith('input_')
+            if widget.objectName() not in exclude_list:
                 widget_name = widget.objectName()
                 if isinstance(widget, QPlainTextEdit):
                     value = widget.toPlainText()
-                    print(f"Widget Name: {widget_name}, Value: {value}")
-                    data[widget_name] = value
+                    if value:
+                        print(f"Widget Name: {widget_name}, Value: {value}")
+                        data[widget_name] = value
                 elif isinstance(widget, QCheckBox):
                     value = widget.isChecked()
-                    print(f"Widget Name: {widget_name}, Value: {value}")
-                    data[widget_name] = value
+                    if value:
+                        print(f"Widget Name: {widget_name}, Value: {value}")
+                        data[widget_name] = value
                 elif isinstance(widget, QRadioButton):
                     if widget.isChecked():
                         value = widget.text()
-                        print(f"Widget Name: {widget_name}, Value: {value}")
-                        data[widget_name] = value
+                        if value:
+                            print(f"Widget Name: {widget_name}, Value: {value}")
+                            data[widget_name] = value
 
         return data
 
     def send_data(self):
-        if self.ui.pushButton.isEnabled():
+        if self.ui.send_btn.isEnabled():
             exclude_list = ["qt_scrollarea_viewport", "qt_scrollarea_hcontainer", "qt_scrollarea_vcontainer", ""]
             data = self.__get_data(exclude_list)
             packet_sender(data)
