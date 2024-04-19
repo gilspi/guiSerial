@@ -1,0 +1,693 @@
+{
+    "ask_rf_->_ask_if___(rx_section)": [
+        {
+            "name": "DA28 Control",
+            "id": "da28_control",
+            "size": 3,
+            "offset_bytes": 0,
+            "offset_bits": 0,
+            "type": "radiobutton",
+            "params": {
+                "AUTO Mode": 7,
+                "OUT SW": {
+                    "min": 0,
+                    "max": 3
+                }
+            }
+        },
+        {
+            "name": "DA23 Control",
+            "id": "da23_control",
+            "size": 3,
+            "offset_bytes": 0,
+            "offset_bits": 3,
+            "type": "radiobutton",
+            "params": {
+                "AUTO Mode": 7,
+                "OUT SW": {
+                    "min": 0,
+                    "max": 3
+                }
+            }
+        },
+        {
+            "name": "DA7 Control",
+            "id": "da7_control",
+            "size": 2,
+            "offset_bytes": 0,
+            "offset_bits": 6,
+            "type": "radiobutton",
+            "params": {
+                "AUTO Mode": 3,
+                "OUT SW": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "DA4 Control",
+            "id": "da4_control",
+            "size": 2,
+            "offset_bytes": 1,
+            "offset_bits": 0,
+            "type": "radiobutton",
+            "params": {
+                "AUTO Mode": 3,
+                "OUT SW": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "DA2 Control",
+            "id": "da2_control",
+            "size": 2,
+            "offset_bytes": 1,
+            "offset_bits": 2,
+            "type": "radiobutton",
+            "params": {
+                "AUTO Mode": 3,
+                "OUT SW": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "DA3 Control",
+            "id": "da3_control",
+            "size": 2,
+            "offset_bytes": 1,
+            "offset_bits": 4,
+            "type": "radiobutton",
+            "params": {
+                "AUTO Mode": 3,
+                "OUT SW": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "En_IQdmd",
+            "id": "en_iqdmd",
+            "size": 2,
+            "offset_bytes": 1,
+            "offset_bits": 6,
+            "type": "radiobutton",
+            "params": {
+                "AUTO Mode": 3,
+                "State": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "En_IQmd",
+            "id": "en_iqmd",
+            "size": 2,
+            "offset_bytes": 2,
+            "offset_bits": 0,
+            "type": "radiobutton",
+            "params": {
+                "AUTO Mode": 3,
+                "State": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "En_LO_5",
+            "id": "en_lo_5",
+            "size": 2,
+            "offset_bytes": 2,
+            "offset_bits": 2,
+            "type": "radiobutton",
+            "params": {
+                "AUTO Mode": 3,
+                "State": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "En_LO_33",
+            "id": "en_lo_33",
+            "size": 2,
+            "offset_bytes": 2,
+            "offset_bits": 4,
+            "type": "radiobutton",
+            "params": {
+                "AUTO Mode": 3,
+                "State": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "En_IQdmd_PWR",
+            "id": "en_iqdmd_pwr",
+            "size": 2,
+            "offset_bytes": 2,
+            "offset_bits": 6,
+            "type": "radiobutton",
+            "params": {
+                "AUTO Mode": 3,
+                "State": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "En_LO_amp",
+            "id": "en_lo_amp",
+            "size": 2,
+            "offset_bytes": 3,
+            "offset_bits": 0,
+            "type": "radiobutton",
+            "params": {
+                "AUTO Mode": 3,
+                "State": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "En_RX_amp",
+            "id": "en_rx_amp",
+            "size": 2,
+            "offset_bytes": 3,
+            "offset_bits": 2,
+            "type": "radiobutton",
+            "params": {
+                "AUTO Mode": 3,
+                "State": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "HMC_Enable",
+            "id": "hmc_enable",
+            "size": 2,
+            "offset_bytes": 3,
+            "offset_bits": 4,
+            "type": "radiobutton",
+            "params": {
+                "AUTO Mode": 3,
+                "State": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "ASK_IF_Power_Mode",
+            "id": "ask_if_power_mode",
+            "size": 1,
+            "offset_bytes": 3,
+            "offset_bits": 6,
+            "type": "checkbutton",
+            "params": {
+                "Off": 0,
+                "On": 1
+            }
+        },
+        {
+            "name": "FORCE_UPDATE",
+            "id": "force_update",
+            "size": 1,
+            "offset_bytes": 3,
+            "offset_bits": 7,
+            "type": "checkbutton",
+            "params": {
+                "Off": 0,
+                "On": 1
+            }
+        },
+        {
+            "name": "ATT_IN_COM",
+            "id": "att_in_com",
+            "size": 6,
+            "offset_bytes": 4,
+            "offset_bits": 0,
+            "type": "text",
+            "params": {
+                "ATT": {
+                    "min": 0,
+                    "max": 63
+                }
+            }
+        },
+        {
+            "name": "ATT_IN_IQ",
+            "id": "att_in_iq",
+            "size": 6,
+            "offset_bytes": 5,
+            "offset_bits": 0,
+            "type": "text",
+            "params": {
+                "ATT": {
+                    "min": 0,
+                    "max": 63
+                }
+            }
+        },
+        {
+            "name": "HMC Freq 0",
+            "id": "hmc_freq_0",
+            "size": 8,
+            "offset_bytes": 6,
+            "offset_bits": 16,
+            "type": "text",
+            "params": {
+                "frequency": {
+                    "min": 500,
+                    "max": 6000,
+                    "units": "MHz"
+                }
+            }
+        },
+        {
+            "name": "HMC Freq 1",
+            "id": "hmc_freq_1",
+            "size": 8,
+            "offset_bytes": 8,
+            "offset_bits": 16,
+            "type": "text",
+            "params": {
+                "frequency": {
+                    "min": 500,
+                    "max": 6000,
+                    "units": "MHz"
+                }
+            }
+        },
+        {
+            "name": "HMC Freq 2",
+            "id": "hmc_freq_2",
+            "size": 8,
+            "offset_bytes": 10,
+            "offset_bits": 16,
+            "type": "text",
+            "params": {
+                "frequency": {
+                    "min": 500,
+                    "max": 6000,
+                    "units": "MHz"
+                }
+            }
+        },
+        {
+            "name": "HMC Freq 3",
+            "id": "hmc_freq_3",
+            "size": 8,
+            "offset_bytes": 12,
+            "offset_bits": 16,
+            "type": "text",
+            "params": {
+                "frequency": {
+                    "min": 500,
+                    "max": 6000,
+                    "units": "MHz"
+                }
+            }
+        },
+        {
+            "name": "CMP_TH_LOW",
+            "id": "cmp_th_low",
+            "size": 8,
+            "offset_bytes": 14,
+            "offset_bits": 0,
+            "type": "text",
+            "params": {
+                "INT": {
+                    "min": 0,
+                    "max": 255
+                }
+            }
+        },
+        {
+            "name": "CMP_TH_HIGH",
+            "id": "cmp_th_high",
+            "size": 8,
+            "offset_bytes": 15,
+            "offset_bits": 0,
+            "type": "text",
+            "params": {
+                "INT": {
+                    "min": 0,
+                    "max": 255
+                }
+            }
+        }
+    ],
+    "ask_if_->_ask_rf_(tx_section)": [
+        {
+            "name": "DA28 State",
+            "id": "da28_state",
+            "size": 2,
+            "offset_bytes": 0,
+            "offset_bits": 0,
+            "type": "radiobutton",
+            "params": {
+                "OUT SW": {
+                    "min": 0,
+                    "max": 3
+                }
+            }
+        },
+        {
+            "name": "DA23 State",
+            "id": "da23_state",
+            "size": 2,
+            "offset_bytes": 0,
+            "offset_bits": 2,
+            "type": "radiobutton",
+            "params": {
+                "OUT SW": {
+                    "min": 0,
+                    "max": 3
+                }
+            }
+        },
+        {
+            "name": "DA7 State",
+            "id": "da7_state",
+            "size": 1,
+            "offset_bytes": 0,
+            "offset_bits": 4,
+            "type": "checkbutton",
+            "params": {
+                "OUT SW": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "DA4 State",
+            "id": "da4_state",
+            "size": 1,
+            "offset_bytes": 0,
+            "offset_bits": 5,
+            "type": "checkbutton",
+            "params": {
+                "OUT SW": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "DA2 State",
+            "id": "da2_state",
+            "size": 1,
+            "offset_bytes": 0,
+            "offset_bits": 6,
+            "type": "checkbutton",
+            "params": {
+                "OUT SW": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "DA3 State",
+            "id": "da3_state",
+            "size": 1,
+            "offset_bytes": 0,
+            "offset_bits": 7,
+            "type": "checkbutton",
+            "params": {
+                "OUT SW": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "En_IQdmd",
+            "id": "en_iqdmd_2",
+            "size": 1,
+            "offset_bytes": 1,
+            "offset_bits": 0,
+            "type": "checkbutton",
+            "params": {
+                "State": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "En_IQmd",
+            "id": "en_iqmd_2",
+            "size": 1,
+            "offset_bytes": 1,
+            "offset_bits": 1,
+            "type": "checkbutton",
+            "params": {
+                "State": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "En_LO_5",
+            "id": "en_lo_5_2",
+            "size": 1,
+            "offset_bytes": 1,
+            "offset_bits": 2,
+            "type": "checkbutton",
+            "params": {
+                "State": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "En_LO_33",
+            "id": "en_lo_33_2",
+            "size": 1,
+            "offset_bytes": 1,
+            "offset_bits": 3,
+            "type": "checkbutton",
+            "params": {
+                "State": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "En_IQdmd_PWR",
+            "id": "en_iqdmd_pwr_2",
+            "size": 1,
+            "offset_bytes": 1,
+            "offset_bits": 4,
+            "type": "checkbutton",
+            "params": {
+                "State": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "En_LO_amp",
+            "id": "en_lo_amp_2",
+            "size": 1,
+            "offset_bytes": 1,
+            "offset_bits": 5,
+            "type": "checkbutton",
+            "params": {
+                "State": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "En_RX_amp",
+            "id": "en_rx_amp_2",
+            "size": 1,
+            "offset_bytes": 1,
+            "offset_bits": 6,
+            "type": "checkbutton",
+            "params": {
+                "State": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "HMC_Enable",
+            "id": "hmc_enable_2",
+            "size": 1,
+            "offset_bytes": 1,
+            "offset_bits": 7,
+            "type": "checkbutton",
+            "params": {
+                "State": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "ATT_IN_COM",
+            "id": "att_in_com_2",
+            "size": 6,
+            "offset_bytes": 2,
+            "offset_bits": 0,
+            "type": "text",
+            "params": {
+                "ATT": {
+                    "min": 0,
+                    "max": 63
+                }
+            }
+        },
+        {
+            "name": "ATT_IN_IQ",
+            "id": "att_in_iq_2",
+            "size": 6,
+            "offset_bytes": 3,
+            "offset_bits": 0,
+            "type": "text",
+            "params": {
+                "ATT": {
+                    "min": 0,
+                    "max": 63
+                }
+            }
+        },
+        {
+            "name": "HMC Freq 0",
+            "id": "hmc_freq_0_2",
+            "size": 8,
+            "offset_bytes": 4,
+            "offset_bits": 16,
+            "type": "text",
+            "params": {
+                "frequency": {
+                    "min": 500,
+                    "max": 6000,
+                    "units": "MHz"
+                }
+            }
+        },
+        {
+            "name": "CMP_TH_LOW",
+            "id": "cmp_th_low_2",
+            "size": 8,
+            "offset_bytes": 6,
+            "offset_bits": 0,
+            "type": "text",
+            "params": {
+                "INT": {
+                    "min": 0,
+                    "max": 255
+                }
+            }
+        },
+        {
+            "name": "CMP_TH_HIGH",
+            "id": "cmp_th_high_2",
+            "size": 8,
+            "offset_bytes": 7,
+            "offset_bits": 0,
+            "type": "text",
+            "params": {
+                "INT": {
+                    "min": 0,
+                    "max": 255
+                }
+            }
+        },
+        {
+            "name": "VDET_RX_MAXPWR",
+            "id": "vdet_rx_maxpwr_2",
+            "size": 8,
+            "offset_bytes": 8,
+            "offset_bits": 0,
+            "type": "text",
+            "params": {
+                "INT": {
+                    "min": 0,
+                    "max": 255
+                }
+            }
+        },
+        {
+            "name": "VDET_OUT_MAXPWR",
+            "id": "vdet_out_maxpwr_2",
+            "size": 8,
+            "offset_bytes": 9,
+            "offset_bits": 0,
+            "type": "text",
+            "params": {
+                "INT": {
+                    "min": 0,
+                    "max": 255
+                }
+            }
+        },
+        {
+            "name": "HMC_LD",
+            "id": "hmc_ld_2",
+            "size": 1,
+            "offset_bytes": 10,
+            "offset_bits": 0,
+            "type": "checkbutton",
+            "params": {
+                "INT": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "CMP_LOW",
+            "id": "cmp_low_2",
+            "size": 1,
+            "offset_bytes": 10,
+            "offset_bits": 1,
+            "type": "checkbutton",
+            "params": {
+                "INT": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        {
+            "name": "CMP_HIGH",
+            "id": "cmp_high_2",
+            "size": 1,
+            "offset_bytes": 10,
+            "offset_bits": 2,
+            "type": "checkbutton",
+            "params": {
+                "INT": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        }
+    ]
+}
