@@ -9,6 +9,6 @@ venv
 # etc
 ASK_IF_PROTO.MD
 .env
-
-=======
 src/.env
+__pycache__/
+src/data/__pycache__/
