@@ -4,12 +4,85 @@ from PySide6.QtWidgets import QApplication, QMainWindow
 
 from ui_main import Ui_MainWindow
 
+<<<<<<< Updated upstream
+=======
+from data.transport_serial import available_ports, serial_init
+
+>>>>>>> Stashed changes
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+<<<<<<< Updated upstream
+=======
+        self.__add_ports()
+        self.ui.send_btn.setEnabled(False)
+        self.ui.send_btn.clicked.connect(self.send_data)
+
+    def __add_ports(self):
+        self.ui.list_ports.addItems([tport for tport in available_ports[:3]])
+        self.ui.list_ports.currentIndexChanged.connect(self.on_combo_box_changed)
+        self.ui.btn_connect.clicked.connect(self.connect_to_port)
+
+    def on_combo_box_changed(self, index):
+        self.selected_port = available_ports[index-1]
+        print("Selected:", self.selected_port)
+
+    def connect_to_port(self):
+        if self.selected_port:
+            print("Connection to port:", self.selected_port)
+            self.ui.send_btn.setEnabled(True)
+            self.ser = serial.Serial(self.selected_port, baudrate=115200, bytesize=8, timeout=0.1)
+            serial_init(self.ser)
+        else:
+            print("No selected.")
+
+    def closeEvent(self, event):
+        try:
+            if self.ser.isOpen():
+                self.ser.close()
+                print("Port closed.")
+        except AttributeError:
+            print("Non port selected. App closed.")
+        finally:
+            event.accept()
+
+    def __get_data(self, exclude_list: list):
+        data = {}
+
+        all_widgets = self.findChildren(QWidget)
+        for widget in all_widgets:
+            if widget.objectName() not in exclude_list:
+                widget_name = widget.objectName()
+                if isinstance(widget, QPlainTextEdit):
+                    value = widget.toPlainText()
+                    if value:
+                        print(f"Widget Name: {widget_name}, Value: {value}")
+                        data[widget_name] = value
+                elif isinstance(widget, QCheckBox):
+                    value = widget.isChecked()
+                    print(f"Widget Name: {widget_name}, Value: {value}")
+                    data[widget_name] = str(value)
+                elif isinstance(widget, QRadioButton):
+                    if widget.isChecked():
+                        value = widget.text()
+                        if value:
+                            print(f"Widget Name: {widget_name}, Value: {value}")
+                            data[widget_name] = value
+        print(json.dumps(data, indent=4))
+        return data
+
+    def send_data(self):
+        if self.ui.send_btn.isEnabled():
+            exclude_list = ["qt_scrollarea_viewport", "qt_scrollarea_hcontainer", "qt_scrollarea_vcontainer", ""]
+            data = self.__get_data(exclude_list)
+            packet_sender(data)
+            print("Data send:\n", json.dumps(data, indent=4))
+        else:
+            print("Port not selected. Cannot send data.")
+>>>>>>> Stashed changes
 
 
 if __name__ == "__main__":

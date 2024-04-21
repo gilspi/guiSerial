@@ -18,24 +18,30 @@ def search_data(string: str) -> dict:
     result = {}
 
     for item in data:
-        key = item[1] if len(item) >= 2 else "INT"
+        key = item[1] if len(item) >= 2 else "RANGE"
         value = item[0].strip()
-
+        print(key)
         if '-' in value:
             min_val, max_val = map(int, value.split('-'))
             value = {"min": min_val, "max": max_val}
         elif 'MHz' in key:
             max_val, units = key.split(" ")
             min_val, max_val = int(value), int(max_val)
-            value = {"min": min_val, "max": max_val, "units": units}
-            key = "frequency"
+            value = {"min": min_val, "max": max_val}
+            key = "RANGE"
         else:
             value = int(value)
 
         result[key] = value
 
     if 'Off/On' in result:
-        result['State'] = result.pop('Off/On')
+        result['RANGE'] = result.pop('Off/On')
+    if "OUT SW" in result:
+        result['RANGE'] = result.pop("OUT SW")
+    if "ATT" in result:
+        result['RANGE'] = result.pop("ATT")
+    if "AUTO Mode" in result:
+        result['AUTO'] = result.pop("AUTO Mode")
 
     return result
 
