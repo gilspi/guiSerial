@@ -1,0 +1,1599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>793</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Serial</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(120, 120, 120)</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>90</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>111</width>
+      <height>95</height>
+     </size>
+    </property>
+    <layout class="QVBoxLayout" name="att_in_iq_layout">
+     <item>
+      <widget class="QLabel" name="att_in_iq">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>ATT_IN_IQ</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="att_in_iq_value">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>71</height>
+        </size>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::ContextMenuPolicy::NoContextMenu</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: white</string>
+       </property>
+       <property name="plainText">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>140</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>111</width>
+      <height>95</height>
+     </size>
+    </property>
+    <layout class="QVBoxLayout" name="hmc_freq_0_layout">
+     <item>
+      <widget class="QLabel" name="hmc_freq_0">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>HMC Freq 0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="hmc_freq_0_value">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>71</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: white</string>
+       </property>
+       <property name="plainText">
+        <string>500</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>40</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>111</width>
+      <height>95</height>
+     </size>
+    </property>
+    <layout class="QVBoxLayout" name="hmc_freq_1_layout">
+     <item>
+      <widget class="QLabel" name="hmc_freq_1">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>HMC Freq 1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="hmc_freq_1_value">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>71</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: white</string>
+       </property>
+       <property name="plainText">
+        <string>500</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>90</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>111</width>
+      <height>95</height>
+     </size>
+    </property>
+    <layout class="QVBoxLayout" name="hmc_freq_2_layout">
+     <item>
+      <widget class="QLabel" name="hmc_freq_2">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>HMC Freq 2</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="hmc_freq_2_value">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>71</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: white</string>
+       </property>
+       <property name="plainText">
+        <string>500</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_5">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>140</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>111</width>
+      <height>95</height>
+     </size>
+    </property>
+    <layout class="QVBoxLayout" name="hmc_freq_3_layout">
+     <item>
+      <widget class="QLabel" name="hmc_freq_3">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>HMC Freq 3</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="hmc_freq_3_value">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>71</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: white</string>
+       </property>
+       <property name="plainText">
+        <string>500</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_6">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>40</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>111</width>
+      <height>95</height>
+     </size>
+    </property>
+    <layout class="QVBoxLayout" name="cmp_th_low_layout">
+     <item>
+      <widget class="QLabel" name="cmp_th_low">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>CMP_TH_LOW</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="cmp_th_low_value">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>71</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: white</string>
+       </property>
+       <property name="plainText">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_7">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>90</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>111</width>
+      <height>95</height>
+     </size>
+    </property>
+    <layout class="QVBoxLayout" name="cmp_th_high_layout">
+     <item>
+      <widget class="QLabel" name="cmp_th_high">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>CMP_TH_HIGH</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="cmp_th_high_value">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>71</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: white</string>
+       </property>
+       <property name="plainText">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="input_name">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>10</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ASK RF -&gt; ASK IF</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="output_name">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>320</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ASK IF -&gt; ASK RF</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_10">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>350</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>111</width>
+      <height>95</height>
+     </size>
+    </property>
+    <layout class="QVBoxLayout" name="att_in_com_2_layout">
+     <item>
+      <widget class="QLabel" name="att_in_com_2">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>ATT_IN_COM</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="att_in_com_2_value">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>71</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: white</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_11">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>400</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>111</width>
+      <height>95</height>
+     </size>
+    </property>
+    <layout class="QVBoxLayout" name="cmp_th_high_2_layout">
+     <item>
+      <widget class="QLabel" name="cmp_th_high_2">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>CMP_TH_HIGH</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="cmp_th_high_2_value">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>71</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: white</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_12">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>400</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>111</width>
+      <height>95</height>
+     </size>
+    </property>
+    <layout class="QVBoxLayout" name="att_in_iq_2_layout">
+     <item>
+      <widget class="QLabel" name="att_in_iq_2">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>ATT_IN_IQ</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="att_in_iq_2_value">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>71</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: white</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_14">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>450</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>111</width>
+      <height>95</height>
+     </size>
+    </property>
+    <layout class="QVBoxLayout" name="vdet_rx_maxpwr_2_layout">
+     <item>
+      <widget class="QLabel" name="vdet_rx_maxpwr_3">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>VDET_RX_MAXPWR</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="vdet_rx_maxpwr_2_value">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>71</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: white</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_15">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>450</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>111</width>
+      <height>95</height>
+     </size>
+    </property>
+    <layout class="QVBoxLayout" name="hmc_freq_0_2_layout">
+     <item>
+      <widget class="QLabel" name="hmc_freq_0_2">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>HMC Freq 0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="hmc_freq_0_2_value">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>71</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: white</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_17">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>350</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>111</width>
+      <height>95</height>
+     </size>
+    </property>
+    <layout class="QVBoxLayout" name="cmp_th_low_2_layout">
+     <item>
+      <widget class="QLabel" name="cmp_th_low_2">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>CMP_TH_LOW</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="cmp_th_low_2_value">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>71</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: white</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="send_btn">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>280</y>
+      <width>161</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white
+</string>
+    </property>
+    <property name="text">
+     <string>SEND</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="da28_control">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>91</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>DA28 Control</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_29">
+     <item>
+      <widget class="QRadioButton" name="da28_control_value_auto">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="statusTip">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>AUTO</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="da28_control_value_0">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="da28_control_value_1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="da28_control_value_2">
+       <property name="text">
+        <string>2</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="da28_control_value_3">
+       <property name="text">
+        <string>3</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="da23_control">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>80</y>
+      <width>91</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>DA23 Control</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_30">
+     <item>
+      <widget class="QRadioButton" name="da23_control_value_auto">
+       <property name="text">
+        <string>AUTO</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="da23_control_value_0">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="da23_control_value_1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="da23_control_value_2">
+       <property name="text">
+        <string>2</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="da23_control_value_3">
+       <property name="text">
+        <string>3</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="da4_control">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>190</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>DA4 Control</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_31">
+     <item>
+      <widget class="QRadioButton" name="da4_control_value_auto">
+       <property name="text">
+        <string>AUTO</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="da4_control_value_0">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="da4_control_value_1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="da7_control">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>190</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>DA7 Control</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_32">
+     <item>
+      <widget class="QRadioButton" name="da7_control_value_auto">
+       <property name="text">
+        <string>AUTO</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="da7_control_value_0">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="da7_control_value_1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="da3_control">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>190</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>DA3 Control</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_33">
+     <item>
+      <widget class="QRadioButton" name="da3_control_value_auto">
+       <property name="text">
+        <string>AUTO</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="da3_control_value_0">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="da3_control_value_1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="da2_control">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>110</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>DA2 Control</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_34">
+     <item>
+      <widget class="QRadioButton" name="da2_control_value_auto">
+       <property name="text">
+        <string>AUTO</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="da2_control_value_0">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="da2_control_value_1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="en_iqmd">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>110</y>
+      <width>71</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>En_IQmd</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_35">
+     <item>
+      <widget class="QRadioButton" name="en_iqmd_value_auto">
+       <property name="text">
+        <string>AUTO</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="en_iqmd_value_0">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="en_iqmd_value_1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="en_iqdmd">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>30</y>
+      <width>71</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>En_IQdmd</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_36">
+     <item>
+      <widget class="QRadioButton" name="en_iqdmd_value_auto">
+       <property name="text">
+        <string>AUTO</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="en_iqdmd_value_0">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="en_iqdmd_value_1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="en_lo_33">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>30</y>
+      <width>71</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>En_LO_33</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_37">
+     <item>
+      <widget class="QRadioButton" name="en_lo_33_value_auto">
+       <property name="text">
+        <string>AUTO</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="en_lo_33_value_0">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="en_lo_33_value_1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="en_lo_5">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>190</y>
+      <width>71</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>En_LO_5</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_38">
+     <item>
+      <widget class="QRadioButton" name="en_lo_5_value_auto">
+       <property name="text">
+        <string>AUTO</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="en_lo_5_value_0">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="en_lo_5_value_1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="en_iqdmd_pwr">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>190</y>
+      <width>101</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>En_IQdmd_PWR</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_39">
+     <item>
+      <widget class="QRadioButton" name="en_iqdmd_pwr_auto">
+       <property name="text">
+        <string>AUTO</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="en_iqdmd_pwr_0">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="en_iqdmd_pwr_1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="en_lo_amp">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>190</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>En_LO_amp</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_40">
+     <item>
+      <widget class="QRadioButton" name="en_lo_amp_value_auto">
+       <property name="text">
+        <string>AUTO</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="en_lo_amp_value_0">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="en_lo_amp_value_1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="en_rx_amp">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>190</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>En_RX_amp</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_41">
+     <item>
+      <widget class="QRadioButton" name="en_rx_amp_value_auto">
+       <property name="text">
+        <string>AUTO</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="en_rx_amp_value_0">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="en_rx_amp_value_1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="hmc_enable">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>190</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>HMC_Enable</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_42">
+     <item>
+      <widget class="QRadioButton" name="hmc_enable_value_auto">
+       <property name="text">
+        <string>AUTO</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="hmc_enable_value_0">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="hmc_enable_value_1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="da23_state">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>450</y>
+      <width>81</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>DA23 State</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_43">
+     <item>
+      <widget class="QRadioButton" name="da23_state_value_0">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="da23_state_value_1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="da23_state_value_2">
+       <property name="text">
+        <string>2</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="da23_state_value_3">
+       <property name="text">
+        <string>3</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="da28_state_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>340</y>
+      <width>81</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>DA28 State</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_44">
+     <item>
+      <widget class="QRadioButton" name="da28_state_value_0">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="da28_state_value_1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="da28_state_value_2">
+       <property name="text">
+        <string>2</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="da28_state_value_3">
+       <property name="text">
+        <string>3</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>140</y>
+      <width>134</width>
+      <height>48</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="checkboxes_ver_layout_2">
+     <item>
+      <widget class="QCheckBox" name="ask_if_power_mode">
+       <property name="text">
+        <string>ASK_IF_Power_Mode</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="force_update">
+       <property name="text">
+        <string>FORCE_UPDATE</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>40</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>111</width>
+      <height>95</height>
+     </size>
+    </property>
+    <layout class="QVBoxLayout" name="att_in_com_layout">
+     <item>
+      <widget class="QLabel" name="att_in_com">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>ATT_IN_COM</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="att_in_com_value">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>71</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: white</string>
+       </property>
+       <property name="plainText">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>350</y>
+      <width>121</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="vdet_out_maxpwr_2_layout_2">
+     <item>
+      <widget class="QLabel" name="vdet_rx_maxpwr_2">
+       <property name="text">
+        <string>VDET_OUT_MAXPWR</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="vdet_out_maxpwr_2_value">
+       <property name="styleSheet">
+        <string notr="true">background-color: white</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>350</y>
+      <width>211</width>
+      <height>206</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="checkboxes_hor_layout">
+     <item>
+      <layout class="QVBoxLayout" name="checkboxes_ver_layout">
+       <item>
+        <widget class="QCheckBox" name="da7_state">
+         <property name="text">
+          <string>DA7 State</string>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="da4_state">
+         <property name="text">
+          <string>DA4 State</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="da2_state">
+         <property name="text">
+          <string>DA2 State</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="en_lo_34">
+         <property name="text">
+          <string>En_LO_33</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="en_lo_amp_2">
+         <property name="text">
+          <string>En_LO_amp</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="hmc_enable_2">
+         <property name="text">
+          <string>HMC_Enable</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="cmp_high">
+         <property name="text">
+          <string>CMP_HIGH</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="hmc_ld">
+         <property name="text">
+          <string>HMC_LD</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="checkboxes_ver_layout_3">
+       <item>
+        <widget class="QCheckBox" name="en_iqdmd_2">
+         <property name="text">
+          <string>En_IQdmd</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="en_iqmd_2">
+         <property name="text">
+          <string>En_IQmd</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="da3_state">
+         <property name="text">
+          <string>DA3 State</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="en_lo_6">
+         <property name="text">
+          <string>En_LO_5</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="en_iqdmd_pwr_2">
+         <property name="text">
+          <string>En_IQdmd_PWR</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="en_rx_amp_2">
+         <property name="text">
+          <string>En_RX_amp</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="cmp_low">
+         <property name="text">
+          <string>CMP_LOW</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="select_ports">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>201</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Select port</string>
+    </property>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QComboBox" name="list_ports">
+       <property name="contextMenuPolicy">
+        <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
+       </property>
+       <property name="editable">
+        <bool>false</bool>
+       </property>
+       <property name="currentText">
+        <string>No selected</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>No selected</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="btn_connect">
+       <property name="text">
+        <string>Connect</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
