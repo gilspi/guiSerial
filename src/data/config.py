@@ -31,3 +31,5 @@ def serial_ports():
             pass
 
     return result
+
+print(serial_ports())
