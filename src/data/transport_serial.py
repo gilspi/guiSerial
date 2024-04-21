@@ -14,6 +14,7 @@ test_ports = [
 ]
 
 available_ports = serial_ports()
+print(available_ports)
 
 test_ports.append(available_ports)
 print(test_ports)
@@ -121,7 +122,7 @@ def serial_init(_ser: serial.Serial):
 
 
 if __name__ == "__main__":
-    # port = '/dev/tty.wlan-debug'  # Замените на нужный порт
+    port = '/dev/tty.wlan-debug'  # Замените на нужный порт
     ser = serial.Serial(available_ports[0], baudrate=115200, bytesize=8, timeout=0.1)
     serial_init(ser)
     # packet_sender(d)
