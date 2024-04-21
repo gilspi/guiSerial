@@ -1,22 +1,22 @@
 import sys
+import json
 
-from PySide6.QtWidgets import QApplication, QMainWindow
+import serial
+from PySide6.QtWidgets import (
+    QApplication, QMainWindow, QWidget,
+    QPlainTextEdit, QRadioButton, QCheckBox
+)
 
 from ui_main import Ui_MainWindow
 
-<<<<<<< Updated upstream
-=======
 from data.transport_serial import available_ports, serial_init
 
->>>>>>> Stashed changes
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-<<<<<<< Updated upstream
-=======
         self.__add_ports()
         self.ui.send_btn.setEnabled(False)
         self.ui.send_btn.clicked.connect(self.send_data)
@@ -78,11 +78,10 @@ class MainWindow(QMainWindow):
         if self.ui.send_btn.isEnabled():
             exclude_list = ["qt_scrollarea_viewport", "qt_scrollarea_hcontainer", "qt_scrollarea_vcontainer", ""]
             data = self.__get_data(exclude_list)
-            packet_sender(data)
+            # packet_sender(data)
             print("Data send:\n", json.dumps(data, indent=4))
         else:
             print("Port not selected. Cannot send data.")
->>>>>>> Stashed changes
 
 
 if __name__ == "__main__":
