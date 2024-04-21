@@ -2,12 +2,9 @@ import time
 import multiprocessing
 from queue import Empty
 
-<<<<<<< Updated upstream
-=======
 import queue
 
 from src.data.config import serial_ports
->>>>>>> Stashed changes
 import serial
 
 
@@ -21,13 +18,7 @@ test_ports = [
 available_ports = serial_ports()
 
 test_ports.append(available_ports)
-<<<<<<< Updated upstream
 print(test_ports)
-
-
-def connect(queue: multiprocessing.Queue, port: str = '/dev/tty.wlan-debug', baudrate: int = 115200, bytesize: int = 8, timeout: float = 0.1):
-=======
-print(f"Test ports: {test_ports}")
 
 
 # Пример вызова функции с вашим словарем данных
@@ -107,27 +98,19 @@ print(tx_buff.hex())
 
 
 def serial_receiver(_ser: serial.Serial, queue: queue.Queue):
->>>>>>> Stashed changes
     try:
         ser = serial.Serial(port=port, baudrate=baudrate, bytesize=bytesize, timeout=timeout)
         while True:
-<<<<<<< Updated upstream
             data = ser.read()
-=======
             data = _ser.read()
             # print(data)
->>>>>>> Stashed changes
             queue.put(data)  # Помещаем полученные данные в очередь
     except serial.SerialException as e:
         print("Ошибка при подключении или чтении данных:", e)
 
 
-<<<<<<< Updated upstream
-def update(queue: multiprocessing.Queue):
-=======
 def serial_transmitter(_ser: serial.Serial, tx_queue: queue.Queue):
     # add tx_buff to tx_queue
->>>>>>> Stashed changes
     while True:
         if not tx_queue.empty():
             byte_arr = bytearray([0 * 16])
@@ -146,7 +129,6 @@ def main():
     port = "/dev/tty.wlan-debug"  # Замените на нужный порт
     data_queue = multiprocessing.Queue()
 
-<<<<<<< Updated upstream
     connect_process = multiprocessing.Process(target=connect, args=(data_queue, port))
     gui_process = multiprocessing.Process(target=update, args=(data_queue,))
     connect_process.start()
@@ -156,15 +138,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
-=======
-    _serial_transmitter = threading.Thread(target=serial_transmitter, args=(_ser, data_queue)).start()
-    # _serial_receiver = threading.Thread(target=serial_receiver, args=(_ser, data_queue)).start()  # запускаю поток
-
-
-if __name__ == "__main__":
     port = '/dev/tty.wlan-debug'  # Замените на нужный порт
     ser = serial.Serial(port, baudrate=115200, bytesize=8, timeout=0.1)
     serial_init(ser)
     # packet_sender(d)
->>>>>>> Stashed changes
