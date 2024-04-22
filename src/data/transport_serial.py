@@ -105,13 +105,14 @@ def packet_receiver(data: bytes, _tx_queue: queue.Queue, _data_queue: queue.Queu
         pass
 
 
-def serial_receiver(_ser: serial.Serial, _tx_queue: queue.Queue, _data_queue: queue.Queue):
+def serial_receiver(_ser: serial.Serial, _tx_queue: queue.Queue):
     try:
         while True:
             data = _ser.read()
             print(data)
             _tx_queue.put(data)  # Помещаем полученные данные в очередь
             #packet_receiver(data, _tx_queue, _data_queue)
+            tx_queue.put(data)  # Помещаем полученные данные в очередь
     except serial.SerialException as e:
         print("Ошибка при подключении или чтении данных:", e)
 
@@ -130,7 +131,6 @@ if __name__ == "__main__":
 
     available_ports = serial_ports()
     print(available_ports)
-
     test_ports.append(available_ports)
     print(test_ports)
 
