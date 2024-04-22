@@ -15,6 +15,8 @@ from data.transport_serial import available_ports, serial_init
 class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
+        self.selected_port = None
+        self.ser = None
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.__add_ports()

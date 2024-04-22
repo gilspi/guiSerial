@@ -35,6 +35,7 @@ d = {
     "att_in_com": "0",
 }
 
+
 def packet_sender(_tx_queue: queue.Queue, data: dict) -> bytearray:
     """PACKET SENDER -> bytearray"""
     tx_buff = bytearray(16)
@@ -95,24 +96,25 @@ def serial_transmitter(_ser: serial.Serial, _tx_queue: queue.Queue):
             print("Получены данные из порта:", data)
 
 
-def packet_receiver(data: bytes, _tx_queue: queue.Queue, _data_queue: queue.Queue):
+def packet_receiver(data: bytes, _data_queue: queue.Queue):
     t_start = time.monotonic()  # program starts working
     time.sleep(.1)
+    # достаем из _tx_queue
     t_stop = time.monotonic()  # program ends working
     t_diff = t_stop - t_start  # diff between stop and start
     if t_diff > 1000:
         # got a new byte with offset 0
         pass
+    # вносим в _data_queue
 
 
-def serial_receiver(_ser: serial.Serial, _tx_queue: queue.Queue):
+def serial_receiver(_ser: serial.Serial, _tx_queue: queue.Queue, _data_queue: queue.Queue):
     try:
         while True:
             data = _ser.read()
             print(data)
             _tx_queue.put(data)  # Помещаем полученные данные в очередь
-            #packet_receiver(data, _tx_queue, _data_queue)
-            tx_queue.put(data)  # Помещаем полученные данные в очередь
+            #packet_receiver(data, _data_queue)
     except serial.SerialException as e:
         print("Ошибка при подключении или чтении данных:", e)
 
