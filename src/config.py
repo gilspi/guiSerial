@@ -11,4 +11,4 @@ load_dotenv(dotenv_path)
 FILE_PATH = os.environ.get("FILE_PATH")
 JSON_FILE_PATH = os.environ.get("JSON_FILE_PATH")
 
-JSON_DATA = to_json(FILE_PATH, "/Users/timocruz/Desktop/gui/src/test_parsed_data.json")
+JSON_DATA = to_json(FILE_PATH, JSON_FILE_PATH)
