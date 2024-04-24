@@ -1,6 +1,8 @@
 import re
 import json
 
+from typing import Dict, Any
+
 
 def search_data(string: str) -> dict:
     string = re.sub(r'\. #\d+ bit(?:s)?', '', string)  # remove substring .D bit/bits
@@ -20,7 +22,6 @@ def search_data(string: str) -> dict:
     for item in data:
         key = item[1] if len(item) >= 2 else "RANGE"
         value = item[0].strip()
-        print(key)
         if '-' in value:
             min_val, max_val = map(int, value.split('-'))
             value = {"min": min_val, "max": max_val}
@@ -106,13 +107,13 @@ def parse_file(path: str) -> dict:
     return d
 
 
-def to_json(fpath: str, jpath: str, pointer: str = "w") -> str:
+def to_json(fpath: str, jpath: str, mode: str = "w") -> Dict[str, Any]:
     parse_data = parse_file(fpath)
 
     json_data = json.dumps(parse_data, indent=4)
 
-    with open(jpath, pointer) as data:
+    with open(jpath, mode) as data:
         data.write(json_data)
 
     print("Данные успешно записаны в файл parse_data.json.")
-    return json_data
+    return json.loads(json_data)
