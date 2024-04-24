@@ -107,7 +107,7 @@ def parse_file(path: str) -> dict:
     return d
 
 
-def to_json(fpath: str, jpath: str, mode: str = "w") -> Dict[str, Any]:
+def to_json(fpath: str, jpath: str, mode: str = "w+") -> Dict[str, Any]:
     parse_data = parse_file(fpath)
 
     json_data = json.dumps(parse_data, indent=4)
