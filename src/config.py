@@ -2,7 +2,7 @@ import os
 
 from dotenv import load_dotenv
 
-from utils.utils import to_json
+from src.utils.utils import to_json
 
 
 dotenv_path = os.path.join(os.path.dirname(__file__), ".env")

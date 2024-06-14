@@ -3,12 +3,13 @@ import json
 
 import serial
 from PySide6.QtWidgets import (
-    QApplication, QMainWindow, QPlainTextEdit,
-    QRadioButton, QCheckBox, QWidget,
+    QApplication, QMainWindow, QWidget,
+    QPlainTextEdit, QRadioButton, QCheckBox
 )
+
 from ui_main import Ui_MainWindow
 
-from data.transport_serial import available_ports, serial_init, packet_sender
+from data.transport_serial import available_ports, serial_init
 
 
 class MainWindow(QMainWindow):
@@ -64,23 +65,22 @@ class MainWindow(QMainWindow):
                         data[widget_name] = value
                 elif isinstance(widget, QCheckBox):
                     value = widget.isChecked()
-                    if value:
-                        print(f"Widget Name: {widget_name}, Value: {value}")
-                        data[widget_name] = value
+                    print(f"Widget Name: {widget_name}, Value: {value}")
+                    data[widget_name] = str(value)
                 elif isinstance(widget, QRadioButton):
                     if widget.isChecked():
                         value = widget.text()
                         if value:
                             print(f"Widget Name: {widget_name}, Value: {value}")
                             data[widget_name] = value
-
+        print(json.dumps(data, indent=4))
         return data
 
     def send_data(self):
         if self.ui.send_btn.isEnabled():
             exclude_list = ["qt_scrollarea_viewport", "qt_scrollarea_hcontainer", "qt_scrollarea_vcontainer", ""]
             data = self.__get_data(exclude_list)
-            packet_sender(data)
+            # packet_sender(data)
             print("Data send:\n", json.dumps(data, indent=4))
         else:
             print("Port not selected. Cannot send data.")
@@ -89,7 +89,6 @@ class MainWindow(QMainWindow):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()
-
     window.show()
 
     sys.exit(app.exec())

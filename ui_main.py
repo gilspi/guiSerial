@@ -298,11 +298,12 @@ class Ui_MainWindow(object):
         self.send_btn = QPushButton(self.centralwidget)
         self.send_btn.setObjectName(u"send_btn")
         self.send_btn.setGeometry(QRect(600, 280, 161, 51))
-        self.send_btn.setStyleSheet(u"background-color: white\n"
+        self.send_btn.setStyleSheet(u"background-color: balck\n"
 "")
+        self.send_btn.setAutoDefault(False)
         self.da28_control = QGroupBox(self.centralwidget)
         self.da28_control.setObjectName(u"da28_control")
-        self.da28_control.setGeometry(QRect(20, 80, 91, 111))
+        self.da28_control.setGeometry(QRect(10, 80, 91, 111))
         self.verticalLayout_29 = QVBoxLayout(self.da28_control)
         self.verticalLayout_29.setObjectName(u"verticalLayout_29")
         self.da28_control_value_auto = QRadioButton(self.da28_control)
@@ -337,7 +338,7 @@ class Ui_MainWindow(object):
 
         self.da23_control = QGroupBox(self.centralwidget)
         self.da23_control.setObjectName(u"da23_control")
-        self.da23_control.setGeometry(QRect(120, 80, 91, 111))
+        self.da23_control.setGeometry(QRect(110, 80, 91, 111))
         self.verticalLayout_30 = QVBoxLayout(self.da23_control)
         self.verticalLayout_30.setObjectName(u"verticalLayout_30")
         self.da23_control_value_auto = QRadioButton(self.da23_control)
@@ -431,7 +432,7 @@ class Ui_MainWindow(object):
 
         self.da2_control = QGroupBox(self.centralwidget)
         self.da2_control.setObjectName(u"da2_control")
-        self.da2_control.setGeometry(QRect(300, 110, 81, 81))
+        self.da2_control.setGeometry(QRect(300, 110, 91, 81))
         self.verticalLayout_34 = QVBoxLayout(self.da2_control)
         self.verticalLayout_34.setObjectName(u"verticalLayout_34")
         self.da2_control_value_auto = QRadioButton(self.da2_control)
@@ -452,7 +453,7 @@ class Ui_MainWindow(object):
 
         self.en_iqmd = QGroupBox(self.centralwidget)
         self.en_iqmd.setObjectName(u"en_iqmd")
-        self.en_iqmd.setGeometry(QRect(220, 110, 71, 81))
+        self.en_iqmd.setGeometry(QRect(210, 110, 91, 81))
         self.verticalLayout_35 = QVBoxLayout(self.en_iqmd)
         self.verticalLayout_35.setObjectName(u"verticalLayout_35")
         self.en_iqmd_value_auto = QRadioButton(self.en_iqmd)
@@ -473,7 +474,7 @@ class Ui_MainWindow(object):
 
         self.en_iqdmd = QGroupBox(self.centralwidget)
         self.en_iqdmd.setObjectName(u"en_iqdmd")
-        self.en_iqdmd.setGeometry(QRect(320, 30, 71, 81))
+        self.en_iqdmd.setGeometry(QRect(310, 30, 91, 81))
         self.verticalLayout_36 = QVBoxLayout(self.en_iqdmd)
         self.verticalLayout_36.setObjectName(u"verticalLayout_36")
         self.en_iqdmd_value_auto = QRadioButton(self.en_iqdmd)
@@ -494,7 +495,7 @@ class Ui_MainWindow(object):
 
         self.en_lo_33 = QGroupBox(self.centralwidget)
         self.en_lo_33.setObjectName(u"en_lo_33")
-        self.en_lo_33.setGeometry(QRect(240, 30, 71, 81))
+        self.en_lo_33.setGeometry(QRect(220, 30, 91, 81))
         self.verticalLayout_37 = QVBoxLayout(self.en_lo_33)
         self.verticalLayout_37.setObjectName(u"verticalLayout_37")
         self.en_lo_33_value_auto = QRadioButton(self.en_lo_33)
@@ -670,7 +671,7 @@ class Ui_MainWindow(object):
 
         self.layoutWidget1 = QWidget(self.centralwidget)
         self.layoutWidget1.setObjectName(u"layoutWidget1")
-        self.layoutWidget1.setGeometry(QRect(640, 140, 134, 48))
+        self.layoutWidget1.setGeometry(QRect(640, 140, 153, 48))
         self.checkboxes_ver_layout_2 = QVBoxLayout(self.layoutWidget1)
         self.checkboxes_ver_layout_2.setObjectName(u"checkboxes_ver_layout_2")
         self.checkboxes_ver_layout_2.setContentsMargins(0, 0, 0, 0)
@@ -706,7 +707,7 @@ class Ui_MainWindow(object):
 
         self.layoutWidget3 = QWidget(self.centralwidget)
         self.layoutWidget3.setObjectName(u"layoutWidget3")
-        self.layoutWidget3.setGeometry(QRect(630, 350, 121, 51))
+        self.layoutWidget3.setGeometry(QRect(630, 350, 133, 51))
         self.vdet_out_maxpwr_2_layout_2 = QVBoxLayout(self.layoutWidget3)
         self.vdet_out_maxpwr_2_layout_2.setObjectName(u"vdet_out_maxpwr_2_layout_2")
         self.vdet_out_maxpwr_2_layout_2.setContentsMargins(0, 0, 0, 0)
@@ -723,7 +724,7 @@ class Ui_MainWindow(object):
 
         self.layoutWidget4 = QWidget(self.centralwidget)
         self.layoutWidget4.setObjectName(u"layoutWidget4")
-        self.layoutWidget4.setGeometry(QRect(140, 350, 211, 206))
+        self.layoutWidget4.setGeometry(QRect(140, 350, 239, 206))
         self.checkboxes_hor_layout = QHBoxLayout(self.layoutWidget4)
         self.checkboxes_hor_layout.setObjectName(u"checkboxes_hor_layout")
         self.checkboxes_hor_layout.setContentsMargins(0, 0, 0, 0)
@@ -815,7 +816,7 @@ class Ui_MainWindow(object):
 
         self.select_ports = QGroupBox(self.centralwidget)
         self.select_ports.setObjectName(u"select_ports")
-        self.select_ports.setGeometry(QRect(20, 10, 201, 61))
+        self.select_ports.setGeometry(QRect(10, 10, 211, 61))
         self.formLayout = QFormLayout(self.select_ports)
         self.formLayout.setObjectName(u"formLayout")
         self.list_ports = QComboBox(self.select_ports)
